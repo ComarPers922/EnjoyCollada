@@ -3,7 +3,7 @@
 EnjoyCollada::EnjoyCollada(const char* path)
 {
 	tinyxml2::XMLDocument xml;
-	xml.LoadFile("TestLevel.dae");
+	xml.LoadFile(path);
 	auto* COLLADA = xml.FirstChildElement("COLLADA");
 	std::cout << COLLADA->FirstAttribute()->Value() << std::endl;
 	auto* library_geometries = COLLADA->FirstChildElement("library_geometries");
