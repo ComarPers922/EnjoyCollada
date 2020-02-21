@@ -68,6 +68,7 @@ EnjoyCollada::EnjoyCollada(const char* path)
 		{
 			Float2 newTexcoord;
 			ss >> newTexcoord.x >> newTexcoord.y;
+			newTexcoord.y = 1 - newTexcoord.y;
 			newMesh.texcoords.push_back(newTexcoord);
 		}
 		// End of Texcoords
